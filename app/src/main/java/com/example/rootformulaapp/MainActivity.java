@@ -3,8 +3,12 @@ package com.example.rootformulaapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    EditText eTA, eTB, eTC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

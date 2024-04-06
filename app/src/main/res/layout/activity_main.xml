@@ -98,17 +98,34 @@
 
     <Button
         android:id="@+id/btnCal"
-        android:layout_width="136dp"
-        android:layout_height="81dp"
+        android:layout_width="135dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="80dp"
         android:backgroundTint="#CFE2F8"
         android:text="Calculat"
         android:textColor="#333333"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnRnd"
+        app:layout_constraintTop_toBottomOf="@+id/eTC"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnRnd"
+        android:layout_width="135dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="194dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#CEAEE1"
+        android:text="Random"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eTC"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
