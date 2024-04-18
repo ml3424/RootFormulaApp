@@ -21,53 +21,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.086" />
 
-    <Button
-        android:id="@+id/btnA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#CEAEE1"
-        android:onClick="clickA"
-        android:text="a"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eTA"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/btnB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#CFE2F8"
-        android:onClick="clickB"
-        android:text="b"
-        android:textColor="#333333"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eTB"
-        app:layout_constraintTop_toBottomOf="@+id/btnA" />
-
-    <Button
-        android:id="@+id/btnC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#CEAEE1"
-        android:onClick="clickC"
-        android:text="c"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/eTC"
-        app:layout_constraintTop_toBottomOf="@+id/btnB" />
-
     <EditText
         android:id="@+id/eTA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="enter A parameter"
         android:inputType="number|numberDecimal|numberSigned"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,9 +38,10 @@
         android:id="@+id/eTB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="enter B parameter"
         android:inputType="number|numberDecimal|numberSigned"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,9 +51,10 @@
         android:id="@+id/eTC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="enter C parameter"
         android:inputType="number|numberDecimal|numberSigned"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,35 +63,47 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnCal"
-        android:layout_width="135dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#CFE2F8"
-        android:onClick="clickCal"
-        android:text="Calculat"
-        android:textColor="#333333"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnRnd"
-        app:layout_constraintTop_toBottomOf="@+id/eTC"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/btnRnd"
         android:layout_width="135dp"
         android:layout_height="80dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="194dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="80dp"
         android:backgroundTint="#CEAEE1"
         android:onClick="clickRnd"
         android:text="Random"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTC"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="275dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTC" />
+
+    <Button
+        android:id="@+id/btnCal2"
+        android:layout_width="135dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#CEAEE1"
+        android:onClick="calResult"
+        android:text="Calculat"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eTC"
         app:layout_constraintVertical_bias="1.0" />
