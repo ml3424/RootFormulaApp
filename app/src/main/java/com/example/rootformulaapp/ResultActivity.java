@@ -18,6 +18,7 @@ public class ResultActivity extends AppCompatActivity {
 
     double a,b,c;
     String result;
+    double inRoot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +35,47 @@ public class ResultActivity extends AppCompatActivity {
         c = gi.getDoubleExtra("c",-888.0);
         result = calResult(a,b,c);
 
+        if(inRoot > 0)
+        {
+            if(a > 0)
+            {
+                iV.setImageResource(R.drawable.happttwo);
+            }
+            else
+            {
+                iV.setImageResource(R.drawable.sadtwo);
+            }
+        }
+        else if(inRoot == 0)
+        {
+            if(a > 0)
+            {
+                iV.setImageResource(R.drawable.happyone);
+            }
+            else
+            {
+                iV.setImageResource(R.drawable.sadone);
+            }
+        }
+        else
+        {
+            if(a > 0)
+            {
+                iV.setImageResource(R.drawable.happynone);
+            }
+            else
+            {
+                iV.setImageResource(R.drawable.sadnone);
+            }
+        }
+
 
     }
 
 
     public String calResult(double a, double b, double c)
     {
-        double inRoot = b*b - 4*a*c;
+        inRoot = b*b - 4*a*c;
         if(inRoot > 0)
         {
             resultText.setText("First result: "+ String.valueOf((0-b + Math.sqrt(inRoot))/(2*a)) + "\nSec result: "+ String.valueOf((0-b - Math.sqrt(inRoot))/(2*a)));

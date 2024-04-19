@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText eTA, eTB, eTC;
     Button btnRnd, btnCal2;
     TextView tV1;
+    Toast t;
 
     double a,b,c = 0;
     String result, inputA, inputB, inputC;
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    t.makeText(this, "Invalid input try again", Toast.LENGTH_SHORT).show();
                     return false;
                 }
             }
@@ -80,11 +83,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else
                     {
+                        t.makeText(this, "Invalid input try again", Toast.LENGTH_SHORT).show();
                         return false;
                     }
                 }
             }
         }
+        t.makeText(this, "Invalid input try again", Toast.LENGTH_SHORT).show();
         return false;
     }
 
@@ -112,11 +117,18 @@ public class MainActivity extends AppCompatActivity {
             b = Double.valueOf(inputB);
             c = Double.valueOf(inputC);
 
-            Intent si = new Intent(this, ResultActivity.class);
-            si.putExtra("a", a);
-            si.putExtra("b", b);
-            si.putExtra("c", c);
-            startActivityForResult(si,REQUEST_CODE);
+            if(a != 0)
+            {
+                Intent si = new Intent(this, ResultActivity.class);
+                si.putExtra("a", a);
+                si.putExtra("b", b);
+                si.putExtra("c", c);
+                startActivityForResult(si,REQUEST_CODE);
+            }
+            else
+            {
+                t.makeText(this, "a can't be 0", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 }
